@@ -45,4 +45,12 @@ fn main() {
     println!("The char is {z}");
     let heart_eyed_cat = '😻';
     println!("The char is {heart_eyed_cat}");
+
+    let tup = (500, 6.4, 1);
+    let (x, y, z) = tup;
+    println!("The value of x is: {x}");
+    println!("The value of y is: {y}");
+    println!("The value of z is: {z}");
+    let first_element = tup.0;
+    println!("The value of first tuple is: {first_element}")
 }
