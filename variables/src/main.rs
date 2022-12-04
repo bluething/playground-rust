@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
     let mut x = 5;
     println!("The value of x is: {x}");
@@ -52,5 +54,29 @@ fn main() {
     println!("The value of y is: {y}");
     println!("The value of z is: {z}");
     let first_element = tup.0;
-    println!("The value of first tuple is: {first_element}")
+    println!("The value of first tuple is: {first_element}");
+
+    let arr = [1, 2, 3, 4, 5];
+
+    println!("Please enter an array index.");
+
+    let mut index = String::new();
+
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+
+    let element = arr[index];
+
+    println!("The value of the element at index {index} is: {element}");
+
+    let arr_init = [5 ; 5];
+    for element in arr_init {
+        println!("The element is: {element}");
+    }
 }
