@@ -1,5 +1,5 @@
 [package]
-name = "playground-rust"
+name = "playground-rust-looping"
 version = "0.1.0"
 edition = "2021"
 
