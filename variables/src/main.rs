@@ -16,4 +16,26 @@ fn main() {
         println!("The value of y is {:.1}", y);
     }
     println!("The value of y is {y}");
+
+    // addition
+    let sum = 5 + 10;
+    println!("The results is {sum}");
+
+    // subtraction
+    let difference = 95.5 - 4.3;
+    println!("The results is {:.1}", difference);
+
+    // multiplication
+    let product = 4 * 30;
+    println!("The results is {product}");
+
+    // division
+    let quotient = 56.7 / 32.2;
+    println!("The results is {:.2}", quotient);
+    let floored = 2 / 3; // Results in 0
+    println!("The results is {:.1}", floored);
+
+    // remainder
+    let remainder = 43 % 5;
+    println!("The results is {remainder}");
 }
