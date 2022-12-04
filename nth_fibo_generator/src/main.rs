@@ -17,7 +17,7 @@ fn main() {
 fn nth_fibo(n: u32) -> i32 {
     let mut a = 0;
     let mut b = 1;
-    let mut c = 0;
+    let mut c;
     if n == 0 {
         return 0
     }
