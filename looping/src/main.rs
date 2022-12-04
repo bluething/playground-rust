@@ -47,4 +47,8 @@ fn main() {
 
         index += 1;
     }
+
+    for element in arr {
+        println!("the value is: {element}");
+    }
 }
