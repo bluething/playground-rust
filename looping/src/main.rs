@@ -51,4 +51,8 @@ fn main() {
     for element in arr {
         println!("the value is: {element}");
     }
+
+    for element in arr.iter().rev() {
+        println!("the value is: {element}");
+    }
 }
