@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/guessing_game/guessing_game.iml" filepath="$PROJECT_DIR$/guessing_game/guessing_game.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-world/hello-world.iml" filepath="$PROJECT_DIR$/hello-world/hello-world.iml" />
       <module fileurl="file://$PROJECT_DIR$/looping/looping.iml" filepath="$PROJECT_DIR$/looping/looping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nth_fibo_generator/nth_fibo_generator.iml" filepath="$PROJECT_DIR$/nth_fibo_generator/nth_fibo_generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/playground-rust.iml" filepath="$PROJECT_DIR$/.idea/playground-rust.iml" />
       <module fileurl="file://$PROJECT_DIR$/variables/variables.iml" filepath="$PROJECT_DIR$/variables/variables.iml" />
     </modules>
