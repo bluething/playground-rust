@@ -38,4 +38,11 @@ fn main() {
     // remainder
     let remainder = 43 % 5;
     println!("The results is {remainder}");
+
+    let c = 'z';
+    println!("The char is {c}");
+    let z: char = 'ℤ'; // with explicit type annotation
+    println!("The char is {z}");
+    let heart_eyed_cat = '😻';
+    println!("The char is {heart_eyed_cat}");
 }
