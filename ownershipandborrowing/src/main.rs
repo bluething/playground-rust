@@ -27,7 +27,7 @@ fn main() {
     let returned_value = return_one_parameter(&reference_int);
     println!("{}", returned_value);
 
-    let value_one = =24;
+    let value_one = 24;
     let value_two = 67;
     let value: &i32 = explicit_lifetime(&value_one, &value_two);
 }
@@ -45,7 +45,7 @@ fn return_one_parameter(value: &i32) -> &i32 {
     value
 }
 
-fn explicit_lifetime(p1: &i32, p2: &i32) -> &i32 {
+fn explicit_lifetime<'a>(p1: &'a i32, p2: &'a i32) -> &'a i32 {
     if p1 > p2 {
         p1
     } else {
