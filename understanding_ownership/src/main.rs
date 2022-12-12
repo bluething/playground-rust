@@ -41,6 +41,10 @@ fn main() {
     let s8 = String::from("hello");
     let (s9, len) = calculate_length(s8);
     println!("The length of '{}' is {}.", s9, len);
+
+    let s10 = String::from("hello");
+    let len = calculate_length_2(&s10);
+    println!("The length of '{}' is {}.", s10, len);
 }
 // Here, x goes out of scope, then s. But because s's value was moved, nothing
 // special happens.
@@ -79,4 +83,8 @@ fn calculate_length(s: String) -> (String, usize) {
     let length = s.len(); // len() returns the length of a String
 
     (s, length)
+}
+
+fn calculate_length_2(s: &String) -> usize {
+    s.len()
 }
