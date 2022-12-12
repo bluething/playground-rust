@@ -82,7 +82,8 @@ fn main() {
     let r8 = &mut s15; // no problem
     println!("r8: {}", r8);
 
-    let reference_to_nothing = dangle();
+    //let reference_to_nothing = dangle();
+    let reference_to_thing = no_dangle();
 }
 // Here, x goes out of scope, then s. But because s's value was moved, nothing
 // special happens.
@@ -131,10 +132,17 @@ fn change(some_string: &mut String) {
     some_string.push_str(", world");
 }
 
-fn dangle() -> &String {                        // dangle returns a reference to a String
-    let s = String::from("hello");     // s is a new String
-
-    &s                                          // we return a reference to the String, s
-}
+//fn dangle() -> &String {                        // dangle returns a reference to a String
+//    let s = String::from("hello");     // s is a new String
+//
+//    &s                                          // we return a reference to the String, s
+//}
 // Here, s goes out of scope, and is dropped. Its memory goes away.
 // Danger!
+
+fn no_dangle() -> String {                        // return the String
+    let s = String::from("hello");     // s is a new String
+
+    s                                      // return the Sting directly
+}
+// Here, s goes out of scope, and is dropped. Its memory goes away.
