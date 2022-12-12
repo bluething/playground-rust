@@ -19,16 +19,24 @@ fn main() {
         outer_scope = &inner_scope;
     }
 
-    println!("{}", outer_scope);
+    //println!("{}", outer_scope);
 
     //let returned_ref = return_bad_ref();
+
+    let reference_int = 6;
+    let returned_value = return_one_parameter(&reference_int);
+    println!("{}", returned_value);
 }
 
-fn return_bad_ref() -> &i32 {
-    let value: i32 = 5;
-    &value
+//fn return_bad_ref() -> &i32 {
+//    let value: i32 = 5;
+//    &value
+//}
+
+fn lifetime_syntax<'a, 'b>(p1: &'a i32, p2: i32, p3: &'b  f64) {
+
 }
 
-fn lifetime_syntax<'a, 'b>(p1: &'a i32, p2: i32, p3: &'b : f64) {
-
+fn return_one_parameter(value: &i32) -> &i32 {
+    value
 }
