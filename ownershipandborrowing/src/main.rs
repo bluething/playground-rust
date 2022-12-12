@@ -7,8 +7,8 @@ fn main() {
     {
         let next = &mut original;
         *next = String::from("next value");
-        println!("inner scope next: \t\"{}\"\n", next);
         println!("inner scope original: \t\"{}\"\n", original);
+        println!("inner scope next: \t\"{}\"\n", next);
     }
 
     println!("outer scope original: \t\"{}\"\n", original);
