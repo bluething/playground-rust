@@ -54,7 +54,17 @@ fn main() {
     let r1 = &mut s12;
     let r2 = &mut s12;
 
-    println!("{}, {}", r1, r2);
+    //println!("{}, {}", r1, r2);
+
+    let mut s13 = String::from("hello");
+
+    {
+        let r1 = &mut s13;
+        println!("r1: {}", r1);
+    } // r1 goes out of scope here, so we can make a new reference with no problems.
+
+    let r2 = &mut s13;
+    println!("r2: {}", r2);
 }
 // Here, x goes out of scope, then s. But because s's value was moved, nothing
 // special happens.
