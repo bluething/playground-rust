@@ -10,4 +10,9 @@ fn main() {
     let s4 = s3.clone();
 
     println!("s3 = {}, s4 = {}", s3, s4);
+
+    let x = 5;
+    let y = x;
+
+    println!("x = {}, y = {}", x, y);
 }
