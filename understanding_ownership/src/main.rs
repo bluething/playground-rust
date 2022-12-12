@@ -65,6 +65,12 @@ fn main() {
 
     let r2 = &mut s13;
     println!("r2: {}", r2);
+
+    let mut s14 = String::from("hello");
+
+    let r3 = &s14; // no problem
+    let r4 = &s14; // no problem
+    //let r5 = &mut s14; // BIG PROBLEM
 }
 // Here, x goes out of scope, then s. But because s's value was moved, nothing
 // special happens.
