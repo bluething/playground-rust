@@ -46,8 +46,8 @@ fn main() {
     let len = calculate_length_2(&s10);
     println!("The length of '{}' is {}.", s10, len);
 
-    let s11 = String::from("hello");
-    change(&s);
+    let mut s11 = String::from("hello");
+    change(&mut s11);
 }
 // Here, x goes out of scope, then s. But because s's value was moved, nothing
 // special happens.
@@ -92,6 +92,6 @@ fn calculate_length_2(s: &String) -> usize {
     s.len()
 }
 
-fn change(some_string: &String) {
+fn change(some_string: &mut String) {
     some_string.push_str(", world");
 }
