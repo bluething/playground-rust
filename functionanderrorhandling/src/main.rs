@@ -28,6 +28,8 @@ fn main() {
 
     let phrase = write_message_closure(String::from("We hit the ground every time"));
     println!("{}", phrase);
+
+    //panic_vector();     // cause panic because index out of bound
 }
 
 fn return_greater(first: u8, second: u8) -> u8 {
@@ -52,4 +54,9 @@ fn write_message() {
     let name = "Duck Airlines";
     let slogan = "We hit the ground every time";
     println!("Welcome to {}. {}", name, slogan);
+}
+
+fn panic_vector() {
+    let vector = vec![1, 2, 3, 4, 5];
+    println!("{}", vector[10]);
 }
