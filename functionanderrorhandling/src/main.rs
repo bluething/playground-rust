@@ -1,4 +1,6 @@
 #![allow(unused)]
+
+use std::io::{Error, Read};
 use std::fs::File;
 use std::io::ErrorKind;
 
@@ -56,6 +58,17 @@ fn main() {
             }
         }
     }
+
+    let filename2 = "exampledata.txt";
+    let file_data = read_file(filename2);
+    match file_data {
+        Ok(data) => {
+            println!("{}", data);
+        }
+        Err(_) => {
+            println!("No data");
+        }
+    }
 }
 
 fn return_greater(first: u8, second: u8) -> u8 {
@@ -85,4 +98,11 @@ fn write_message() {
 fn panic_vector() {
     let vector = vec![1, 2, 3, 4, 5];
     println!("{}", vector[10]);
+}
+
+fn read_file(filename: &str) -> Result<String, Error> {
+    let mut file_handle = File::open(filename)?;
+    let mut file_data = String::new();
+    file_handle.read_to_string(&mut file_data)?;
+    Ok(file_data)
 }
