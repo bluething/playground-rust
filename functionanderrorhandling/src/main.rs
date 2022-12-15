@@ -1,4 +1,5 @@
 #![allow(unused)]
+use std::fs::File;
 
 use std::io::Stderr;
 
@@ -30,6 +31,16 @@ fn main() {
     println!("{}", phrase);
 
     //panic_vector();     // cause panic because index out of bound
+
+    let filename = "customer.json";
+    match File::open(filename) {
+        Ok(file) => {
+            println!("{:#?}", file);
+        }
+        Err(error) => {
+            println!("{:#?}", error);
+        }
+    }
 }
 
 fn return_greater(first: u8, second: u8) -> u8 {
