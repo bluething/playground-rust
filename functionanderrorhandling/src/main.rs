@@ -22,9 +22,11 @@ fn main() {
 
     let name = "Duck Airlines";
 
-    || {
+    let write_message_closure = || {
         println!("Hey. This is the closure")
     };
+
+    write_message_closure();
 }
 
 fn return_greater(first: u8, second: u8) -> u8 {
