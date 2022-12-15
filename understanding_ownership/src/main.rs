@@ -93,6 +93,19 @@ fn main() {
 
     // word still has the value 5 here, but there's no more string that
     // we could meaningfully use the value 5 with. word is now totally invalid!
+
+    let s17 = String::from("hello world");
+
+    let hello = &s17[0..5];
+    let world = &s17[6..11];
+    println!("{}", hello);
+    println!("{}", world);
+
+    let he = &s17[..2];
+    println!("{}", he);
+
+    let world2 = &s17[6..];
+    println!("{}", world2);
 }
 // Here, x goes out of scope, then s. But because s's value was moved, nothing
 // special happens.
