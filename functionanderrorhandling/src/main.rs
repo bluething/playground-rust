@@ -1,5 +1,6 @@
 #![allow(unused)]
 use std::fs::File;
+use std::io::ErrorKind;
 
 use std::io::Stderr;
 
@@ -38,7 +39,21 @@ fn main() {
             println!("{:#?}", file);
         }
         Err(error) => {
-            println!("{:#?}", error);
+            match error.kind() {
+                ErrorKind::NotFound => {
+                    match File::create(filename) {
+                        Ok(file) => {
+                            println!("File created");
+                        }
+                        Err(error) => {
+                            println!("{:#?}", error);
+                        }
+                    }
+                }
+                _ => {
+                    println!("{:#?}", error);
+                }
+            }
         }
     }
 }
