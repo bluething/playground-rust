@@ -23,7 +23,7 @@ fn main() {
     let name = "Duck Airlines";
 
     let write_message_closure = || {
-        println!("Hey. This is the closure")
+        println!("{}", name)
     };
 
     write_message_closure();
