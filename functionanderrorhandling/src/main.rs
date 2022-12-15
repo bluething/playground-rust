@@ -16,6 +16,15 @@ fn main() {
     }
 
     println!("outer scope original: \t\"{}\"", original);
+
+    // closure
+    write_message();
+
+    let name = "Duck Airlines";
+
+    || {
+        println!("Hey. This is the closure")
+    };
 }
 
 fn return_greater(first: u8, second: u8) -> u8 {
@@ -34,4 +43,10 @@ fn change_original(original: &mut String) {
     let next = original;
     *next = String::from("next value");
     println!("fn change_original: \t\"{}\"", next);     // use next because original no longer own the memory
+}
+
+fn write_message() {
+    let name = "Duck Airlines";
+    let slogan = "We hit the ground every time";
+    println!("Welcome to {}. {}", name, slogan);
 }
