@@ -84,6 +84,15 @@ fn main() {
 
     //let reference_to_nothing = dangle();
     let reference_to_thing = no_dangle();
+
+    let mut s16 = String::from("hello world");
+
+    let word = first_word(&s16); // word will get the value 5
+
+    s16.clear(); // this empties the String, making it equal to ""
+
+    // word still has the value 5 here, but there's no more string that
+    // we could meaningfully use the value 5 with. word is now totally invalid!
 }
 // Here, x goes out of scope, then s. But because s's value was moved, nothing
 // special happens.
@@ -146,3 +155,15 @@ fn no_dangle() -> String {                        // return the String
     s                                      // return the Sting directly
 }
 // Here, s goes out of scope, and is dropped. Its memory goes away.
+
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    s.len()
+}
