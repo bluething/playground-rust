@@ -22,11 +22,12 @@ fn main() {
 
     let name = "Duck Airlines";
 
-    let write_message_closure = |slogan: String| {
-        println!("{}. {}", name, slogan);
+    let write_message_closure = |slogan: String| -> String {
+        String::from(format!("{}. {}", name, slogan))
     };
 
-    write_message_closure(String::from("We hit the ground every time"));
+    let phrase = write_message_closure(String::from("We hit the ground every time"));
+    println!("{}", phrase);
 }
 
 fn return_greater(first: u8, second: u8) -> u8 {
