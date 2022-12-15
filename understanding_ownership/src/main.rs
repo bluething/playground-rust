@@ -106,6 +106,14 @@ fn main() {
 
     let world2 = &s17[6..];
     println!("{}", world2);
+
+    let mut s18 = String::from("hello world");
+
+    let word3 = first_word_slice(&s18);
+    println!("{}", word3);
+
+    s18.clear();
+    //println!("{}", word3);          // immutable reference can't use here
 }
 // Here, x goes out of scope, then s. But because s's value was moved, nothing
 // special happens.
@@ -179,4 +187,16 @@ fn first_word(s: &String) -> usize {
     }
 
     s.len()
+}
+
+fn first_word_slice(s: &String) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[..]
 }
