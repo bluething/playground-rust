@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 fn main() {
     let user1 = User {
         email: String::from("someone@example.com"),
@@ -41,6 +43,8 @@ fn main() {
     let origin = Point(0, 0, 0);
     println!("black0: {}, black1: {}, black3: {}", black.0, black.1, black.2);
     println!("origin0: {}, origin1: {}, origin3: {}", origin.0, origin.1, origin.2);
+    
+    let subject = AlwaysEqual;
 }
 
 struct User {
@@ -70,3 +74,5 @@ fn build_user_using_init_shorthand(email: String, username: String) -> User {
 
 struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
+
+struct AlwaysEqual;
