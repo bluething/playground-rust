@@ -79,6 +79,9 @@ fn main() {
     };
     println!("The area of the rectangle is {} square pixels.", rect3.area());
     println!("Can rect3 hold rect2? {}", rect3.can_hold(&rect2));
+
+    let square1 = Rectangle::square(100);
+    println!("The area of the square is {} square pixels.", square1.area());
 }
 
 struct User {
@@ -134,5 +137,11 @@ impl Rectangle {
     }
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
+    }
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
     }
 }
