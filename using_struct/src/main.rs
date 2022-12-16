@@ -71,6 +71,7 @@ fn main() {
     );
 
     println!("rect2 is {:#?}", rect2);
+    dbg!(&rect2);
 }
 
 struct User {
