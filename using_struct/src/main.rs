@@ -43,8 +43,16 @@ fn main() {
     let origin = Point(0, 0, 0);
     println!("black0: {}, black1: {}, black3: {}", black.0, black.1, black.2);
     println!("origin0: {}, origin1: {}, origin3: {}", origin.0, origin.1, origin.2);
-    
+
     let subject = AlwaysEqual;
+
+    let width1 = 30;
+    let height1 = 50;
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        area(width1, height1)
+    );
 }
 
 struct User {
@@ -76,3 +84,7 @@ struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
 
 struct AlwaysEqual;
+
+fn area(width: u32, height: u32) -> u32 {
+    width * height
+}
