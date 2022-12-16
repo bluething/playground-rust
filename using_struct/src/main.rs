@@ -22,6 +22,20 @@ fn main() {
 
     let user4 = build_user_using_init_shorthand(String::from("fulan@example.com"), String::from("Fulan"));
     println!("User email: {}", user4.email);
+
+    let user5 = User {
+        email: String::from("fulanah@example.com"),
+        username: user1.username,
+        active: user1.active,
+        sign_in_count: user1.sign_in_count,
+    };
+    println!("User email: {}", user5.email);
+
+    let user6 = User {
+        email: String::from("fulanah@example.com"),
+        ..user2
+    };
+    println!("User email: {}", user6.email);
 }
 
 struct User {
