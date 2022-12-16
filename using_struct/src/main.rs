@@ -36,6 +36,11 @@ fn main() {
         ..user2
     };
     println!("User email: {}", user6.email);
+
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 0, 0);
+    println!("black0: {}, black1: {}, black3: {}", black.0, black.1, black.2);
+    println!("origin0: {}, origin1: {}, origin3: {}", origin.0, origin.1, origin.2);
 }
 
 struct User {
@@ -62,3 +67,6 @@ fn build_user_using_init_shorthand(email: String, username: String) -> User {
         sign_in_count: 1,
     }
 }
+
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
