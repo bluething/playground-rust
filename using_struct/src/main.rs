@@ -61,7 +61,7 @@ fn main() {
     );
 
     let rect2 = Rectangle {
-        width: 30,
+        width: dbg!(30),
         height: 50,
     };
 
