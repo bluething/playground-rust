@@ -19,6 +19,9 @@ fn main() {
 
     let user3 = build_user(String::from("fulan@example.com"), String::from("Fulan"));
     println!("User name: {}", user3.username);
+
+    let user4 = build_user_using_init_shorthand(String::from("fulan@example.com"), String::from("Fulan"));
+    println!("User email: {}", user4.email);
 }
 
 struct User {
@@ -32,6 +35,15 @@ fn build_user(email: String, username: String) -> User {
     User {
         email: email,
         username: username,
+        active: true,
+        sign_in_count: 1,
+    }
+}
+
+fn build_user_using_init_shorthand(email: String, username: String) -> User {
+    User {
+        email,
+        username,
         active: true,
         sign_in_count: 1,
     }
