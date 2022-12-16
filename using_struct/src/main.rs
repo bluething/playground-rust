@@ -69,6 +69,8 @@ fn main() {
         "The area of the rectangle is {} square pixels.",
         area_struct(&rect2)
     );
+
+    println!("rect2 is {}", rect2);
 }
 
 struct User {
