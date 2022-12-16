@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/ownershipandborrowing/ownershipandborrowing.iml" filepath="$PROJECT_DIR$/ownershipandborrowing/ownershipandborrowing.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/playground-rust.iml" filepath="$PROJECT_DIR$/.idea/playground-rust.iml" />
       <module fileurl="file://$PROJECT_DIR$/understanding_ownership/understanding_ownership.iml" filepath="$PROJECT_DIR$/understanding_ownership/understanding_ownership.iml" />
+      <module fileurl="file://$PROJECT_DIR$/using_struct/using_struct.iml" filepath="$PROJECT_DIR$/using_struct/using_struct.iml" />
       <module fileurl="file://$PROJECT_DIR$/variables/variables.iml" filepath="$PROJECT_DIR$/variables/variables.iml" />
     </modules>
   </component>
