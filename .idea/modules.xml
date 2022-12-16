@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/branches/branches.iml" filepath="$PROJECT_DIR$/branches/branches.iml" />
       <module fileurl="file://$PROJECT_DIR$/duckair/duckair.iml" filepath="$PROJECT_DIR$/duckair/duckair.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enum_and_pattern_matching/enum_and_pattern_matching.iml" filepath="$PROJECT_DIR$/enum_and_pattern_matching/enum_and_pattern_matching.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercism/exercism.iml" filepath="$PROJECT_DIR$/exercism/exercism.iml" />
       <module fileurl="file://$PROJECT_DIR$/functionanderrorhandling/functionanderrorhandling.iml" filepath="$PROJECT_DIR$/functionanderrorhandling/functionanderrorhandling.iml" />
       <module fileurl="file://$PROJECT_DIR$/functions/functions.iml" filepath="$PROJECT_DIR$/functions/functions.iml" />
