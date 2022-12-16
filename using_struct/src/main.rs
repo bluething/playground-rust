@@ -70,7 +70,7 @@ fn main() {
         area_struct(&rect2)
     );
 
-    println!("rect2 is {}", rect2);
+    println!("rect2 is {:?}", rect2);
 }
 
 struct User {
