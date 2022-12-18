@@ -19,6 +19,9 @@ fn main() {
 
     let coin_penny = value_in_cents(Coin::Penny);
     println!("{}", coin_penny);
+
+    let coin_quarter_alabama = value_in_cents(Coin::Quarter(UsState::Alabama));
+    println!("{}", coin_quarter_alabama);
 }
 
 enum IpAddrKind {
@@ -26,11 +29,17 @@ enum IpAddrKind {
     V6,
 }
 
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+}
+
 enum Coin {
     Penny,
     Nickel,
     Dime,
-    Quarter,
+    Quarter(UsState),
 }
 
 fn value_in_cents(coin: Coin) -> u8 {
@@ -38,6 +47,10 @@ fn value_in_cents(coin: Coin) -> u8 {
         Coin::Penny => 1,
         Coin::Nickel => 5,
         Coin::Dime => 10,
-        Coin::Quarter => 25,
+        Coin::Quarter(state) => {
+            println!("State quarter from {:?}!", state);        // 'UsState' cannot be formatted using '{:?}'
+
+            25
+        },
     }
 }
