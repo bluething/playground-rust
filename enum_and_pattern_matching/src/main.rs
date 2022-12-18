@@ -11,6 +11,11 @@ fn main() {
 
     println!("{}", some_number.unwrap());
     //println!("{}", absent_number.unwrap());     // casue panic
+
+    let x: i8 = 5;
+    let y: Option<i8> = Some(5);
+
+    let sum = x + y;
 }
 
 enum IpAddrKind {
