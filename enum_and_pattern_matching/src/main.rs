@@ -15,10 +15,29 @@ fn main() {
     let x: i8 = 5;
     let y: Option<i8> = Some(5);
 
-    let sum = x + y;
+    //let sum = x + y;                          // the trait `Add<Option<i8>>` is not implemented for `i8`
+
+    let coin_penny = value_in_cents(Coin::Penny);
+    println!("{}", coin_penny);
 }
 
 enum IpAddrKind {
     V4,
     V6,
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
 }
