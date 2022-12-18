@@ -22,6 +22,12 @@ fn main() {
 
     let coin_quarter_alabama = value_in_cents(Coin::Quarter(UsState::Alabama));
     println!("{}", coin_quarter_alabama);
+
+    let five = Some(5);
+    println!("{}", five.unwrap());
+    let six = plus_one(five);
+    println!("{}", six.unwrap());
+    let none = plus_one(None);
 }
 
 enum IpAddrKind {
@@ -52,5 +58,12 @@ fn value_in_cents(coin: Coin) -> u8 {
 
             25
         },
+    }
+}
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
     }
 }
