@@ -27,4 +27,9 @@ fn main() {
     let mut s8 = String::from("lo");
     s8.push('l');
     println!("{}", s8);
+
+    let s9 = String::from("Hello, ");
+    let s10 = String::from("world!");
+    let s11 = s9 + &s10; // note s9 has been moved here and can no longer be used
+    println!("{}", s11);
 }
