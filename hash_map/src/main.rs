@@ -22,4 +22,8 @@ fn main() {
     // field_name and field_value are invalid at this point, try using them and
     // see what compiler error you get!
     // println!("{}", field_name);
+
+    scores.insert(String::from("Blue"), 25);
+    println!("{:?}", scores);
+
 }
