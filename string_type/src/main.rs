@@ -46,4 +46,11 @@ fn main() {
     let hello = String::from("Здравствуйте");
     //let answer = &hello[0];
 
+    for c in "Зд".chars() {
+        println!("{c}");
+    }
+    for b in "Зд".bytes() {
+        println!("{b}");
+    }
+
 }
