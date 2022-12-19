@@ -26,4 +26,9 @@ fn main() {
     scores.insert(String::from("Blue"), 25);
     println!("{:?}", scores);
 
+    scores.entry(String::from("Yellow")).or_insert(55);
+    scores.entry(String::from("Red")).or_insert(50);
+
+    println!("{:?}", scores);
+
 }
