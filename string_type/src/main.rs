@@ -11,4 +11,7 @@ fn main() {
     // the method also works on a literal directly:
     let s3 = "initial contents".to_string();
     println!("{}", s3);
+
+    let s4 = String::from("initial contents");
+    println!("{}", s4);
 }
