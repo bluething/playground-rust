@@ -41,7 +41,9 @@ fn main() {
     println!("{}", s15);
 
     let s15 = String::from("hello");
-    let h = s15[0];
+    //let h = s15[0];
 
+    let hello = String::from("Здравствуйте");
+    //let answer = &hello[0];
 
 }
