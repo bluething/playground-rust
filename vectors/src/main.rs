@@ -13,4 +13,12 @@ fn main() {
         None => println!("There is no third element."),
     }
 
+    let mut v4 = vec![1, 2, 3, 4, 5];
+
+    let first = &v4[0];
+
+    v4.push(6);
+
+    println!("The first element is: {first}");
+
 }
