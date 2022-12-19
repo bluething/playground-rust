@@ -32,4 +32,13 @@ fn main() {
     let s10 = String::from("world!");
     let s11 = s9 + &s10; // note s9 has been moved here and can no longer be used
     println!("{}", s11);
+
+    let s12 = String::from("tic");
+    let s13 = String::from("tac");
+    let s14 = String::from("toe");
+
+    let s15 = format!("{s12}-{s13}-{s14}");
+    println!("{}", s15);
+
+
 }
