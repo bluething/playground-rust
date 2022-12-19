@@ -40,5 +40,8 @@ fn main() {
     let s15 = format!("{s12}-{s13}-{s14}");
     println!("{}", s15);
 
+    let s15 = String::from("hello");
+    let h = s15[0];
+
 
 }
