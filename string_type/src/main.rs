@@ -23,4 +23,8 @@ fn main() {
     let s7 = "bar";
     s6.push_str(s7);
     println!("s7 is {s7}");
+
+    let mut s8 = String::from("lo");
+    s8.push('l');
+    println!("{}", s8);
 }
