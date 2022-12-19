@@ -26,4 +26,10 @@ fn main() {
         println!("{i}");
     }
 
+    let mut v6 = vec![100, 32, 57];
+    for i in &mut v6 {
+        *i += 50;
+        println!("{i}");
+    }
+
 }
