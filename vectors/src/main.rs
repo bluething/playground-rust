@@ -17,8 +17,13 @@ fn main() {
 
     let first = &v4[0];
 
-    v4.push(6);
+    //v4.push(6);       // cause panic because mutable borrow when we have immutable
 
     println!("The first element is: {first}");
+
+    let v5 = vec![100, 32, 57];
+    for i in &v5 {
+        println!("{i}");
+    }
 
 }
